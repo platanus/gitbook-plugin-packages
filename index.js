@@ -1,8 +1,3 @@
-var request = require('request');
-var Q = require('q');
-var _ = require('lodash');
-var npmUserPackages = require('npm-user-packages');
-
 function githubStars(github){
   var str = '<a href="https://github.com/' + github + '/stargazers" target="_blank">';
   str += '<img src="https://img.shields.io/github/stars/' + github + '.svg?style=social">';
