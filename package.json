@@ -6,11 +6,5 @@
     "gitbook": ">1.x.x"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "*",
-    "npm-user-packages": "^1.0.0",
-    "q": "*",
-    "request": "*"
-  }
+  "license": "ISC"
 }
