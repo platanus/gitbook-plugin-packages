@@ -47,7 +47,13 @@ function getTableRow(block, type){
     case 'gem':
       packageString = packageBadge(pkgName, 'gem');
       break;
-    case 'angular':
+    case 'npm':
+      packageString = packageBadge(pkgName, 'npm');
+      break;
+    case 'bower':
+      packageString = packageBadge(pkgName, 'bower');
+      break;
+    case 'npm+bower':
       packageString = packageBadge(pkgName, 'npm') + packageBadge(pkgName, 'bower');
       break;
   }
@@ -71,7 +77,17 @@ module.exports = {
   blocks: {
     npmPackage: {
       process: function(block){
-        return getTableRow(block, 'angular');
+        return getTableRow(block, 'npm');
+      }
+    },
+    bowerPackage: {
+      process: function(block){
+        return getTableRow(block, 'bower');
+      }
+    },
+    npmBowerPackage: {
+      process: function(block){
+        return getTableRow(block, 'npm+bower');
       }
     },
     rubyGem: {
